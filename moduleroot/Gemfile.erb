@@ -1,0 +1,30 @@
+<%# vim:set syntax=eruby: -%>
+source 'https://rubygems.org'
+
+<%- gem_groups = @configs['common'].merge(@configs['local'] || {}) -%>
+<%- gem_groups.keys.sort.each do |group| -%>
+group <%= group %> do
+  <%- gem_lines = [] -%>
+  <%- gem_groups[group].each do |gem| -%>
+    <%-
+      line = %(gem '#{gem['gem']}')
+      if gem['version'] 
+        version = if gem['version_var']
+                    %((ENV['#{gem['version_var']}'] || '#{gem['version']}'))
+                  else
+                    %('gem['version']')
+                  end
+        line += ", #{version}"
+      end
+      gem_lines << line
+    -%>
+  <%- end -%>
+  <%- maxlen = gem_lines.map { |line| line.length }.max -%>
+  <%- gem_lines.sort.each do |line| -%>
+  <%= line %>,<%= ' ' * (maxlen - line.length) %> require: false
+  <%- end -%>
+end
+<%- end -%>
+
+puppetversion = ENV['PUPPET_VERSION'] || '~> 5.0'
+gem 'puppet', puppetversion
