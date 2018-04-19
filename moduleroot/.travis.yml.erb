@@ -6,7 +6,12 @@ rvm:
   - 2.4
   - 2.5
 env:
+<%- if @configs.dig('test_with_debian_puppet', 'stretch') -%>
   - PUPPET_VERSION='4.8.2'
+<%- end -%>
+<%- if @configs.dig('test_with_debian_puppet', 'buster') -%>
+  - PUPPET_VERSION='5.4.0'
+<%- end -%>
   - PUPPET_VERSION='~> 4.0'
   - PUPPET_VERSION='~> 5.0'
 notifications:
