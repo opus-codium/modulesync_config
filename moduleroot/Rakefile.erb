@@ -1,0 +1,17 @@
+require 'puppetlabs_spec_helper/rake_tasks'
+
+PuppetLint.configuration.log_format = '%{path}:%{line}:%{check}:%{KIND}:%{message}'
+PuppetLint.configuration.fail_on_warnings = true
+<%- checks = @configs['common_disabled_lint_checks'] + ( @configs['local_disabled_lint_checks'] || [] ) -%>
+<%- checks.each do |check| -%>
+PuppetLint.configuration.send('<%= check %>')
+<%- end -%>
+exclude_paths = ['spec/**/*.pp', 'pkg/**/*.pp']
+PuppetLint.configuration.ignore_paths = exclude_paths
+PuppetSyntax.exclude_paths = exclude_paths
+
+desc 'Auto-correct puppet-lint offenses'
+task 'lint:auto_correct' do
+  PuppetLint.configuration.fix = true
+  Rake::Task[:lint].invoke
+end
