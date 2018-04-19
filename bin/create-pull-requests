@@ -1,0 +1,15 @@
+#!/bin/sh
+# Stolen from https://github.com/voxpupuli/modulesync_config
+
+set -e
+
+if ! which hub > /dev/null ; then
+  exit 1
+fi
+
+version=$(git describe)
+for module in modules/* ; do
+  (cd "$module"
+  hub pull-request -m "modulesync ${version}"
+  )
+done

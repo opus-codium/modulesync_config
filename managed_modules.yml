@@ -1,0 +1,15 @@
+---
+- puppet-bundle
+- puppet-dehydrated
+- puppet-deploy
+- puppet-easyrsa
+- puppet-firefox
+- puppet-lincall
+- puppet-openproject
+- puppet-openvpn
+- puppet-phantomjs
+- puppet-piwam
+- puppet-puppetvpn
+- puppet-rwhod
+- puppet-sogo3
+- puppet-taiga
