@@ -1,5 +1,6 @@
 ---
 - puppet-bundle
+- puppet-certificate_checker
 - puppet-dehydrated
 - puppet-deploy
 - puppet-easyrsa
