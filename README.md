@@ -17,11 +17,14 @@ bundle exec msync update --noop
 ```
 
 When you are happy with your changes, commit them into *this* repository, tag a
-new version and publish it.
+new version, ensure the changes are documented, and publish the update:
 
 ```
 git add .
 git commit -m 'Add this awesome feature :heart:'
+# Update CHANGELOG.md
+git add CHANGELOG.md
+git commit -m 'Prepare for 0.0.0'
 git push
 git tag -s '0.0.0'
 git push --tags
@@ -39,6 +42,18 @@ and problems to fix, you can open pull-requests:
 ```
 ./bin/create-pull-requests
 ```
+
+If a remote branch `modulesync` existed in a repo, commits will be added on top
+of it, and the branch will not include recent work on master.  To rebase all
+branches on top of master use:
+
+```
+./bin/rebase-on-master
+```
+
+Feel free to manually add commits in the `modulesync` branch until the CI is
+happy with your changes.  When you are ready, merge your Pull Request, and
+remove the `modulesync` branch.
 
 ## How to add a module?
 
