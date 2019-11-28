@@ -14,4 +14,5 @@
 - puppet-rwhod
 - puppet-sogo3
 - puppet-taiga
+- puppet-tls_checker
 - puppet-wifi
