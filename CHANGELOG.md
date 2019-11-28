@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Added
+- Added `bin/rebase-on-master` script which was missing.
+
 ## [1.1.1] - 2019-11-27
 ### Added
 - Added `puppet-tls_checker` to the list of modules.
@@ -22,5 +26,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.0.0] - 2018-12-03
 ### Initial release
 
-[Unreleased]: https://github.com/opus-codium/modulesync_config/compare/1.1.0...master
+[Unreleased]: https://github.com/opus-codium/modulesync_config/compare/1.1.1...master
+[1.1.1]: https://github.com/opus-codium/modulesync_config/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/opus-codium/modulesync_config/compare/1.0.0...1.1.0
