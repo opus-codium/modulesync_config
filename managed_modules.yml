@@ -6,6 +6,7 @@
 - puppet-easyrsa
 - puppet-firefox
 - puppet-lincall
+- puppet-odoo
 - puppet-openproject
 - puppet-openvpn
 - puppet-phantomjs
