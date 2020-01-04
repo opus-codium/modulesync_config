@@ -11,6 +11,7 @@ Gemfile:
         version_var: FACTER_GEM_VERSION
       - gem: puppet-lint-classes_and_types_beginning_with_digits-check
       - gem: puppet-lint-leading_zero-check
+      - gem: puppet-lint-param-docs
       - gem: puppet-lint-param-types
       - gem: puppet-lint-trailing_comma-check
       - gem: puppet-lint-unquoted_string-check
