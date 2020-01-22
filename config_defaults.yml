@@ -9,6 +9,7 @@ Gemfile:
       - gem: facter
         version: '~> 2.0'
         version_var: FACTER_GEM_VERSION
+      - gem: metadata-json-lint
       - gem: puppet-lint-classes_and_types_beginning_with_digits-check
       - gem: puppet-lint-leading_zero-check
       - gem: puppet-lint-param-docs
