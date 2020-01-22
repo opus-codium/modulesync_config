@@ -5,7 +5,7 @@
 
 set -e
 
-for repo in modules/*; do
+for repo in modules/*/*; do
 	(
 		cd $repo
 		git fetch --all
