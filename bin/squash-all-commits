@@ -1,0 +1,18 @@
+#!/bin/sh
+# For each modules, squash all commits in a single one on top of master
+
+set -e
+
+for repo in modules/*/*; do
+	(
+		cd $repo
+		if [ $(git log --format=oneline master..modulesync | wc -l) -gt 1 ]; then
+			git checkout master
+			git merge --squash modulesync
+			git commit -m 'Update from opus-codium modulesync_config'
+			git checkout modulesync
+			git reset master
+			git push -f origin modulesync
+		fi
+	)
+done
