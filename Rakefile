@@ -38,3 +38,10 @@ task :yml do
     end
   end
 end
+
+require 'github_changelog_generator/task'
+
+GitHubChangelogGenerator::RakeTask.new :changelog do |config|
+  config.user = 'opus-codium'
+  config.project = 'modulesync_config'
+end
