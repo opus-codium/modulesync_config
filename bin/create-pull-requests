@@ -8,8 +8,9 @@ if ! which hub > /dev/null ; then
 fi
 
 version=$(git describe --exact-match --tags)
-for module in modules/* ; do
-  (cd "$module"
-  hub pull-request -m "modulesync ${version}"
+for module in modules/*/* ; do
+  (
+    cd "$module"
+    hub pull-request -m "modulesync ${version}"
   )
 done
