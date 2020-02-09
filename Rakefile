@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'erb'
 require 'open3'
 require 'rubocop/rake_task'
