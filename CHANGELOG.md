@@ -1,15 +1,38 @@
 # Changelog
 
+## [1.3.0](https://github.com/opus-codium/modulesync_config/tree/1.3.0) (2020-07-08)
+
+[Full Changelog](https://github.com/opus-codium/modulesync_config/compare/1.2.0...1.3.0)
+
+**Implemented enhancements:**
+
+- Ensure each commits are checked against the test suite [\#17](https://github.com/opus-codium/modulesync_config/pull/17) ([smortex](https://github.com/smortex))
+- Manage spec/spec\_helper.rb [\#16](https://github.com/opus-codium/modulesync_config/pull/16) ([smortex](https://github.com/smortex))
+- Update Ruby versions [\#14](https://github.com/opus-codium/modulesync_config/pull/14) ([smortex](https://github.com/smortex))
+- Rely on github\_changelog\_generator [\#12](https://github.com/opus-codium/modulesync_config/pull/12) ([smortex](https://github.com/smortex))
+
+**Fixed bugs:**
+
+- Fix Rubocop Style/TrailingCommaInArrayLiteral [\#15](https://github.com/opus-codium/modulesync_config/pull/15) ([smortex](https://github.com/smortex))
+- Fix utility scripts [\#13](https://github.com/opus-codium/modulesync_config/pull/13) ([smortex](https://github.com/smortex))
+
+**Merged pull requests:**
+
+- Consider punctuation in gem names [\#18](https://github.com/opus-codium/modulesync_config/pull/18) ([smortex](https://github.com/smortex))
+
 ## [1.2.0](https://github.com/opus-codium/modulesync_config/tree/1.2.0) (2020-01-23)
 
 [Full Changelog](https://github.com/opus-codium/modulesync_config/compare/1.1.1...1.2.0)
 
 **Implemented enhancements:**
 
-- Fix rubocop warning [\#11](https://github.com/opus-codium/modulesync_config/pull/11) ([smortex](https://github.com/smortex))
 - Add puppet-odoo to the modules list [\#10](https://github.com/opus-codium/modulesync_config/pull/10) ([smortex](https://github.com/smortex))
 - Add puppet-lint-param-docs to the checks list [\#9](https://github.com/opus-codium/modulesync_config/pull/9) ([smortex](https://github.com/smortex))
 - Add gem to lint param types [\#8](https://github.com/opus-codium/modulesync_config/pull/8) ([neomilium](https://github.com/neomilium))
+
+**Fixed bugs:**
+
+- Fix Rubocop Layout/LineLength [\#11](https://github.com/opus-codium/modulesync_config/pull/11) ([smortex](https://github.com/smortex))
 
 ## [1.1.1](https://github.com/opus-codium/modulesync_config/tree/1.1.1) (2019-11-28)
 

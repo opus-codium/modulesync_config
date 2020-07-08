@@ -22,8 +22,9 @@ new version, ensure the changes are documented, and publish the update:
 ```
 git add .
 git commit -m 'Add this awesome feature :heart:'
-# Update CHANGELOG.md
-git add CHANGELOG.md
+vim Rakefile # Update future_release of the changelog task
+bundle exec rake changelog
+git add Rakefile CHANGELOG.md
 git commit -m 'Prepare for 0.0.0'
 git push
 git tag -s '0.0.0'
