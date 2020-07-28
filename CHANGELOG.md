@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.0](https://github.com/opus-codium/modulesync_config/tree/1.4.0) (2020-07-28)
+
+[Full Changelog](https://github.com/opus-codium/modulesync_config/compare/1.3.0...1.4.0)
+
+**Implemented enhancements:**
+
+- Add support for gihub-changelog-generator [\#20](https://github.com/opus-codium/modulesync_config/pull/20) ([smortex](https://github.com/smortex))
+- Add puppet-wormhole to the modules list [\#19](https://github.com/opus-codium/modulesync_config/pull/19) ([smortex](https://github.com/smortex))
+
 ## [1.3.0](https://github.com/opus-codium/modulesync_config/tree/1.3.0) (2020-07-08)
 
 [Full Changelog](https://github.com/opus-codium/modulesync_config/compare/1.2.0...1.3.0)
@@ -13,12 +22,9 @@
 
 **Fixed bugs:**
 
+- Consider punctuation in gem names [\#18](https://github.com/opus-codium/modulesync_config/pull/18) ([smortex](https://github.com/smortex))
 - Fix Rubocop Style/TrailingCommaInArrayLiteral [\#15](https://github.com/opus-codium/modulesync_config/pull/15) ([smortex](https://github.com/smortex))
 - Fix utility scripts [\#13](https://github.com/opus-codium/modulesync_config/pull/13) ([smortex](https://github.com/smortex))
-
-**Merged pull requests:**
-
-- Consider punctuation in gem names [\#18](https://github.com/opus-codium/modulesync_config/pull/18) ([smortex](https://github.com/smortex))
 
 ## [1.2.0](https://github.com/opus-codium/modulesync_config/tree/1.2.0) (2020-01-23)
 
