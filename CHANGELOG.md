@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.1](https://github.com/opus-codium/modulesync_config/tree/1.4.1) (2020-07-28)
+
+[Full Changelog](https://github.com/opus-codium/modulesync_config/compare/1.4.0...1.4.1)
+
+**Fixed bugs:**
+
+- Fix Rubocop offence [\#22](https://github.com/opus-codium/modulesync_config/pull/22) ([smortex](https://github.com/smortex))
+- Do not use String\#delete\_suffix [\#21](https://github.com/opus-codium/modulesync_config/pull/21) ([smortex](https://github.com/smortex))
+
 ## [1.4.0](https://github.com/opus-codium/modulesync_config/tree/1.4.0) (2020-07-28)
 
 [Full Changelog](https://github.com/opus-codium/modulesync_config/compare/1.3.0...1.4.0)
