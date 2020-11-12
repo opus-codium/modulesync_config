@@ -1,9 +1,20 @@
 # frozen_string_literal: true
 
 require 'erb'
+require 'find'
 require 'open3'
 require 'rubocop/rake_task'
 require 'yaml'
+
+def project_files(*suffixes, &block)
+  Find.find(*Dir['*']) do |path|
+    if FileTest.directory?(path)
+      Find.prune if %w[modules vendor].include?(path)
+    elsif suffixes.map { |x| path.end_with?(x) }.any?
+      block.call(path)
+    end
+  end
+end
 
 RuboCop::RakeTask.new
 
@@ -12,8 +23,8 @@ task default: %i[erb rubocop yml]
 
 task :erb do
   puts '===> Checking ERB files syntax…'
-  (Dir['**/.*.erb', '**/*.erb']).each do |file|
-    puts "---> #{file}"
+  project_files('.erb') do |file|
+    puts file
     erb = File.read(file)
     code = ERB.new(erb, nil, '-').src
     Open3.popen2e('ruby -c') do |stdin, stdout_and_stderr, wait_thr|
@@ -30,8 +41,8 @@ end
 
 task :yml do
   puts '===> Checking YAML files syntax…'
-  (Dir['**/.*.yml', '**/*.yml']).each do |file|
-    puts "---> #{file}"
+  project_files('.yml', '.yaml') do |file|
+    puts file
 
     begin
       YAML.load_file(file)
