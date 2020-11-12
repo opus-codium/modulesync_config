@@ -1,5 +1,0 @@
----
-language: ruby
-notifications:
-  email:
-    - sysadmins@opus-codium.fr
