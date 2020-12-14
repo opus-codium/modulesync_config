@@ -1,29 +1,30 @@
 ---
+.github/workflows/ci.yml:
+  beaker_fact_matrix: {}
+  excludes: []
+  pidfile_workaround: false
 .travis.yml:
-  test_with_debian_puppet:
-    stretch: false
-    buster: false
+  delete: true
 Gemfile:
-  common:
+  puppet_version: '~> 6.0'
+  required:
     ':test':
-      - gem: facter
-        version: '~> 2.0'
-        version_var: FACTER_GEM_VERSION
+      - gem: voxpupuli-test
+        version: '~> 2.1'
+      - gem: simplecov-console
+    ':development': []
+    ':system_tests':
+      - gem: puppet_metadata
+        version: '~> 0.3.0'
+      - gem: voxpupuli-acceptance
+    ':release':
       - gem: github_changelog_generator
-      - gem: metadata-json-lint
-      - gem: puppet-lint-classes_and_types_beginning_with_digits-check
-      - gem: puppet-lint-leading_zero-check
-      - gem: puppet-lint-param-docs
-      - gem: puppet-lint-param-types
-      - gem: puppet-lint-trailing_comma-check
-      - gem: puppet-lint-unquoted_string-check
-      - gem: puppet-lint-variable_contains_upcase
-      - gem: puppet-lint-version_comparison-check
+        git: https://github.com/voxpupuli/github-changelog-generator
+        branch: voxpupuli_essential_fixes
+      - gem: puppet-blacksmith
+      - gem: voxpupuli-release
       - gem: puppet-strings
-      - gem: puppetlabs_spec_helper
-      - gem: rspec-puppet-facts
-      - gem: rubocop
+        version: '>= 2.2'
 Rakefile:
-  common_disabled_lint_checks:
-    - disable_140chars
-    - disable_documentation
+  config.user: opus-codium
+  puppet_strings_patterns: []
