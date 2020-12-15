@@ -9,7 +9,7 @@ for repo in modules/*/*; do
 	(
 		cd $repo
 		git fetch --all
-		git rebase master
+		git rebase origin/master
 		git push -f origin modulesync
 	)
 done
