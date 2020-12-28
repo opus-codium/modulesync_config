@@ -26,7 +26,7 @@ begin
   require 'github_changelog_generator/task'
   GitHubChangelogGenerator::RakeTask.new :changelog do |config|
     config.future_release = Blacksmith::Modulefile.new.version
-    config.header = <<~HEADER
+    config.header = <<~HEADER.chomp
       # Changelog
 
       All notable changes to this project will be documented in this file.
