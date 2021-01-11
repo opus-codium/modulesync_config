@@ -1,7 +1,7 @@
 # Opus-Codium ModuleSync Configuration
 
 This repository contains the configuration of
-[modulesync](http://github.com/puppetlabs/modulesync) for the Opus-Codium
+[modulesync](https://github.com/puppetlabs/modulesync) for the Opus-Codium
 puppet modules.
 
 A full description of ModuleSync can be found in [ModuleSync's
