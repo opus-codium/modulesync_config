@@ -1,5 +1,40 @@
 # Changelog
 
+## [2.1.0](https://github.com/opus-codium/modulesync_config/tree/2.1.0) (2021-01-11)
+
+[Full Changelog](https://github.com/opus-codium/modulesync_config/compare/2.0.0...2.1.0)
+
+**Implemented enhancements:**
+
+- Manage .gitattributes to normalize EOL [\#42](https://github.com/opus-codium/modulesync_config/pull/42) ([smortex](https://github.com/smortex))
+- Add vcsdeploy to managed modules [\#41](https://github.com/opus-codium/modulesync_config/pull/41) ([neomilium](https://github.com/neomilium))
+- Tell rubocop to ignore the modules directory [\#40](https://github.com/opus-codium/modulesync_config/pull/40) ([smortex](https://github.com/smortex))
+- Chomp CHANGELOG header [\#39](https://github.com/opus-codium/modulesync_config/pull/39) ([smortex](https://github.com/smortex))
+- Only run CI on PR [\#37](https://github.com/opus-codium/modulesync_config/pull/37) ([smortex](https://github.com/smortex))
+- Remove default commit message [\#35](https://github.com/opus-codium/modulesync_config/pull/35) ([neomilium](https://github.com/neomilium))
+- Add a GitHub action for publishing to the forge [\#34](https://github.com/opus-codium/modulesync_config/pull/34) ([smortex](https://github.com/smortex))
+- Remove legacy script [\#28](https://github.com/opus-codium/modulesync_config/pull/28) ([smortex](https://github.com/smortex))
+
+**Fixed bugs:**
+
+- Do not prepend a 'v' to future version [\#38](https://github.com/opus-codium/modulesync_config/pull/38) ([smortex](https://github.com/smortex))
+- Update CHANGELOG.md generator configuration [\#36](https://github.com/opus-codium/modulesync_config/pull/36) ([smortex](https://github.com/smortex))
+- Rebase modulesync branch on top of origin/master [\#33](https://github.com/opus-codium/modulesync_config/pull/33) ([mtancoigne](https://github.com/mtancoigne))
+
+**Closed issues:**
+
+- Add vcsdeploy to managed modules [\#32](https://github.com/opus-codium/modulesync_config/issues/32)
+
+## [2.0.0](https://github.com/opus-codium/modulesync_config/tree/2.0.0) (2020-12-14)
+
+[Full Changelog](https://github.com/opus-codium/modulesync_config/compare/1.4.1...2.0.0)
+
+**Implemented enhancements:**
+
+- Switch from Travis-CI to GitHub Actions [\#26](https://github.com/opus-codium/modulesync_config/pull/26) ([smortex](https://github.com/smortex))
+- Switch from Travis-CI to GitHub Actions [\#24](https://github.com/opus-codium/modulesync_config/pull/24) ([smortex](https://github.com/smortex))
+- Make sure managed repositories are owned by the core team, not the sysadmins team [\#23](https://github.com/opus-codium/modulesync_config/pull/23) ([smortex](https://github.com/smortex))
+
 ## [1.4.1](https://github.com/opus-codium/modulesync_config/tree/1.4.1) (2020-07-28)
 
 [Full Changelog](https://github.com/opus-codium/modulesync_config/compare/1.4.0...1.4.1)
