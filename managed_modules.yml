@@ -10,5 +10,6 @@
 - puppet-sogo
 - puppet-taiga
 - puppet-tls_checker
+- puppet-vcsdeploy
 - puppet-wifi
 - puppet-wormhole
