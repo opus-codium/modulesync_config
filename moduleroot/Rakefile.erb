@@ -5,6 +5,8 @@
 # otherwise attempt to load it directly.
 begin
   require 'voxpupuli/test/rake'
+
+  task default: :rubocop
 rescue LoadError
   require 'puppetlabs_spec_helper/rake_tasks'
 end
