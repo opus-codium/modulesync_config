@@ -59,5 +59,5 @@ GitHubChangelogGenerator::RakeTask.new :changelog do |config|
   config.project = 'modulesync_config'
   config.future_release = '2.1.0'
   config.unreleased = true
-  config.exclude_labels = %w[duplicate question invalid wontfix wont-fix modulesync skip-changelog]
+  config.exclude_labels = %w[duplicate question invalid wontfix wont-fix modulesync skip-changelog ignore]
 end
