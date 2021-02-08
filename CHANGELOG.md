@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.0](https://github.com/opus-codium/modulesync_config/tree/2.2.0) (2021-02-08)
+
+[Full Changelog](https://github.com/opus-codium/modulesync_config/compare/2.1.0...2.2.0)
+
+**Implemented enhancements:**
+
+- Improve rubocop integration [\#47](https://github.com/opus-codium/modulesync_config/pull/47) ([smortex](https://github.com/smortex))
+- Add LICENSE file [\#46](https://github.com/opus-codium/modulesync_config/pull/46) ([smortex](https://github.com/smortex))
+
+**Fixed bugs:**
+
+- Fix management of RSpec helpers [\#45](https://github.com/opus-codium/modulesync_config/pull/45) ([smortex](https://github.com/smortex))
+- Use HTTPS everywhere [\#44](https://github.com/opus-codium/modulesync_config/pull/44) ([smortex](https://github.com/smortex))
+
 ## [2.1.0](https://github.com/opus-codium/modulesync_config/tree/2.1.0) (2021-01-11)
 
 [Full Changelog](https://github.com/opus-codium/modulesync_config/compare/2.0.0...2.1.0)
