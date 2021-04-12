@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.3.0](https://github.com/opus-codium/modulesync_config/tree/2.3.0) (2021-04-12)
+
+[Full Changelog](https://github.com/opus-codium/modulesync_config/compare/2.2.0...2.3.0)
+
+**Implemented enhancements:**
+
+- Ignore issues labelled `ignore` [\#51](https://github.com/opus-codium/modulesync_config/pull/51) ([smortex](https://github.com/smortex))
+
+**Fixed bugs:**
+
+- Exclude items labeled 'ignore' from ChangeLog [\#50](https://github.com/opus-codium/modulesync_config/pull/50) ([smortex](https://github.com/smortex))
+
 ## [2.2.0](https://github.com/opus-codium/modulesync_config/tree/2.2.0) (2021-02-08)
 
 [Full Changelog](https://github.com/opus-codium/modulesync_config/compare/2.1.0...2.2.0)
