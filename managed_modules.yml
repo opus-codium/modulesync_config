@@ -1,6 +1,7 @@
 ---
 - puppet-bundle
 - puppet-certificate_checker
+- puppet-commission
 - puppet-dehydrated
 - puppet-deploy
 - puppet-firefox
