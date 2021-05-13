@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.4.0](https://github.com/opus-codium/modulesync_config/tree/2.4.0) (2021-05-13)
+
+[Full Changelog](https://github.com/opus-codium/modulesync_config/compare/2.3.0...2.4.0)
+
+**Implemented enhancements:**
+
+- Switch back to upstream github\_changelog\_generator [\#56](https://github.com/opus-codium/modulesync_config/pull/56) ([smortex](https://github.com/smortex))
+- Run CI on push to repositories main branch [\#55](https://github.com/opus-codium/modulesync_config/pull/55) ([smortex](https://github.com/smortex))
+- Add commission to managed modules [\#54](https://github.com/opus-codium/modulesync_config/pull/54) ([smortex](https://github.com/smortex))
+
 ## [2.3.0](https://github.com/opus-codium/modulesync_config/tree/2.3.0) (2021-04-12)
 
 [Full Changelog](https://github.com/opus-codium/modulesync_config/compare/2.2.0...2.3.0)

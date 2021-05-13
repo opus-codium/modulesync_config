@@ -57,7 +57,7 @@ require 'github_changelog_generator/task'
 GitHubChangelogGenerator::RakeTask.new :changelog do |config|
   config.user = 'opus-codium'
   config.project = 'modulesync_config'
-  config.future_release = '2.3.0'
+  config.future_release = '2.4.0'
   config.unreleased = true
   config.exclude_labels = %w[duplicate question invalid wontfix wont-fix modulesync skip-changelog ignore]
 end
