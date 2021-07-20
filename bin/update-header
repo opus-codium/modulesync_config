@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+# frozen-string-literal: true
+
+require 'json'
+
+def module_header(name)
+  <<~HEADER.chomp
+    <!-- header GFM -->
+    [![Build Status](https://img.shields.io/github/workflow/status/opus-codium/puppet-#{name}/Release)](https://github.com/opus-codium/puppet-#{name}/releases)
+    [![Puppet Forge](https://img.shields.io/puppetforge/v/opuscodium/#{name}.svg)](https://forge.puppetlabs.com/opuscodium/#{name})
+    [![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/opuscodium/#{name}.svg)](https://forge.puppetlabs.com/opuscodium/#{name})
+    [![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/opuscodium/#{name}.svg)](https://forge.puppetlabs.com/opuscodium/#{name})
+    [![Puppet Forge - scores](https://img.shields.io/puppetforge/f/opuscodium/#{name}.svg)](https://forge.puppetlabs.com/opuscodium/#{name})
+    [![License](https://img.shields.io/github/license/opus-codium/puppet-#{name}.svg)](https://github.com/voxpupuli/opuscodium-#{name}/blob/master/LICENSE.md)
+    <!-- header -->
+  HEADER
+end
+
+unless File.exist?('README.md')
+  warn('No README.md to update')
+  exit
+end
+
+readme = File.read('README.md')
+
+metadata = JSON.parse(File.read('metadata.json'))
+module_name = metadata['name'].split(/-/).last
+
+re = /^<!-- header GFM -->$.*^<!-- header -->$/m
+
+if readme.match(re)
+  readme.sub!(re, module_header(module_name))
+  File.write('README.md', readme)
+else
+  warn('header location not found')
+  exit 1
+end
