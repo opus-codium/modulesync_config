@@ -11,6 +11,18 @@ rescue LoadError
   require 'puppetlabs_spec_helper/rake_tasks'
 end
 
+<%- if Dir[File.join(@metadata[:workdir], 'features', '*.feature')].any? -%>
+# Attempt to load cucumber
+begin
+  require 'cucumber/rake/task'
+
+  Cucumber::Rake::Task.new(:features)
+
+  task default: :features
+rescue LoadError
+end
+
+<%- end -%>
 # load optional tasks for releases
 # only available if gem group releases is installed
 begin
