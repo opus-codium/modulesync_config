@@ -1,4 +1,5 @@
 ---
+- puppet-application
 - puppet-bundle
 - puppet-certificate_checker
 - puppet-commission
