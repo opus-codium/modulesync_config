@@ -1,4 +1,6 @@
 ---
+.github/CODEOWNERS:
+  extra_owners: []
 .github/workflows/ci.yml:
   beaker_fact_matrix: {}
   excludes: []
