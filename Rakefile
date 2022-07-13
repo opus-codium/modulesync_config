@@ -26,7 +26,7 @@ task :erb do
   project_files('.erb') do |file|
     puts file
     erb = File.read(file)
-    code = ERB.new(erb, nil, '-').src
+    code = ERB.new(erb, trim_mode: '-').src
     Open3.popen2e('ruby -c') do |stdin, stdout_and_stderr, wait_thr|
       stdin.puts(code)
       stdin.close
