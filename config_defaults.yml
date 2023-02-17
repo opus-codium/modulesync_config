@@ -5,6 +5,7 @@
   excludes: []
   pidfile_workaround: false
   additional_packages: ''
+  acceptance_tests: true
 .travis.yml:
   delete: true
 Jenkinsfile:
@@ -18,7 +19,7 @@ Gemfile:
       - gem: coveralls
       - gem: simplecov-console
       - gem: puppet_metadata
-        version: '~> 1.0'
+        version: '~> 2.0'
     ':development':
       - gem: guard-rake
       - gem: overcommit
@@ -32,12 +33,11 @@ Gemfile:
         ruby-version: '2.5'
         ruby-operator: '>='
       - gem: voxpupuli-release
-        version: '>= 1.2.0'
-      - gem: puppet-strings
-        version: '>= 2.2'
+        version: '~> 2.0'
 Rakefile:
   config.user: opus-codium
-  puppet_strings_patterns: []
+  # config.project: PROJECT
+  # config.tag_pattern: 'v%s'
 .puppet-lint.rc:
   disabled_lint_checks:
     - parameter_documentation
@@ -46,6 +46,8 @@ Rakefile:
 spec/default_facts.yml:
   delete: true
 spec/classes/coverage_spec.rb:
+  delete: true
+spec/acceptance/nodesets/default.yml:
   delete: true
 spec/acceptance/nodesets/archlinux-2-x64.yml:
   delete: true
@@ -74,6 +76,16 @@ spec/acceptance/nodesets/fedora-25-x64.yml:
 spec/acceptance/nodesets/fedora-26-x64.yml:
   delete: true
 spec/acceptance/nodesets/fedora-27-x64.yml:
+  delete: true
+spec/acceptance/nodesets/debian-7-x64.yml:
+  delete: true
+spec/acceptance/nodesets/debian-8-x64.yml:
+  delete: true
+spec/acceptance/nodesets/sles-11-x64.yml:
+  delete: true
+spec/acceptance/nodesets/sles-12-x64.yml:
+  delete: true
+spec/acceptance/nodesets/ubuntu-1604-x64.yml:
   delete: true
 spec/acceptance/nodesets/ubuntu-server-1204-x64.yml:
   delete: true
