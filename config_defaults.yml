@@ -6,12 +6,15 @@
   pidfile_workaround: false
   additional_packages: ''
   acceptance_tests: true
+# PDK creates this
+.github/workflows/puppet-lint.yml:
+  delete: true
 .travis.yml:
   delete: true
 Jenkinsfile:
   delete: true
 Gemfile:
-  puppet_version: '~> 7.0'
+  puppet_version: '~> 7.24'
   required:
     ':test':
       - gem: voxpupuli-test
@@ -34,6 +37,10 @@ Gemfile:
         ruby-operator: '>='
       - gem: voxpupuli-release
         version: '~> 2.0'
+      - gem: faraday-retry
+        version: '~> 2.1'
+        ruby-version: '2.6'
+        ruby-operator: '>='
 Rakefile:
   config.user: opus-codium
   # config.project: PROJECT
@@ -117,8 +124,6 @@ spec/spec_helper.rb:
 spec/spec_helper_acceptance.rb:
   unmanaged: true
 CONTRIBUTING.md:
-  delete: true
-.yardopts:
   delete: true
 .gitlab-ci.yml:
   delete: true
