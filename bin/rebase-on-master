@@ -7,9 +7,11 @@ set -e
 
 for repo in modules/*/*; do
 	(
+		echo "===> ${repo}"
 		cd $repo
+		main_branch_name=$(git symbolic-ref refs/remotes/origin/HEAD | sed -e 's|refs/remotes/origin/||')
 		git fetch --all
-		git rebase origin/master
-		git push -f origin modulesync
+		git rebase origin/$main_branch_name
+		git push -fu origin modulesync
 	)
 done
