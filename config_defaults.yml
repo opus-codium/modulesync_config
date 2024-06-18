@@ -3,9 +3,8 @@
   extra_owners: []
 .github/workflows/ci.yml:
   excludes: []
-  pidfile_workaround: false
-  additional_packages: ''
   acceptance_tests: true
+  main_branches: ['main']
 # PDK creates this
 .github/workflows/puppet-lint.yml:
   delete: true
@@ -18,25 +17,21 @@ Gemfile:
   required:
     ':test':
       - gem: voxpupuli-test
-        version: '~> 7.0'
+        version: '~> 8.0'
       - gem: coveralls
       - gem: simplecov-console
       - gem: puppet_metadata
-        version: '~> 3.0'
+        version: '~> 4.0'
     ':development':
       - gem: guard-rake
       - gem: overcommit
         version: '>= 0.39.1'
     ':system_tests':
       - gem: voxpupuli-acceptance
-        version: '~> 2.0'
+        version: '~> 3.0'
     ':release':
-      - gem: github_changelog_generator
-        version: '>= 1.16.1'
       - gem: voxpupuli-release
         version: '~> 3.0'
-      - gem: faraday-retry
-        version: '~> 2.1'
 Rakefile:
   config.user: opus-codium
   # config.project: PROJECT
@@ -63,6 +58,8 @@ spec/acceptance/nodesets/centos-66-x64.yml:
 spec/acceptance/nodesets/centos-66-x64-pe.yml:
   delete: true
 spec/acceptance/nodesets/centos-7-x64.yml:
+  delete: true
+spec/acceptance/nodesets/centos-7.yml:
   delete: true
 spec/acceptance/nodesets/centos-72-x64.yml:
   delete: true
@@ -116,6 +113,7 @@ spec/acceptance/nodesets/ec2/windows-2016-base-x64.yml:
   delete: true
 spec/spec_helper.rb:
   add_mocked_facts: true
+  facterdb_string_keys: false
   mock_with: false
 spec/spec_helper_acceptance.rb:
   unmanaged: true
