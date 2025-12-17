@@ -2,7 +2,13 @@
 # Managed by modulesync - DO NOT EDIT
 # https://voxpupuli.org/docs/updating-files-managed-with-modulesync/
 
+backwards-incompatible:
+ - head-branch: ['^change-', '^remove-']
+bug:
+ - head-branch: ['^fix-']
+enhancement:
+ - head-branch: ['^add-', '^allow-', '^set-']
 modulesync:
- - head-branch: ['modulesync']
+ - head-branch: ['^modulesync$']
 skip-changelog:
- - head-branch: ['^release-*', 'release']
+ - head-branch: ['^release-', '^release$']
